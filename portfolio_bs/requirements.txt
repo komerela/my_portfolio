@@ -16,6 +16,6 @@ rsa
 six
 python-pip
 python-dev
-libpq-dev
 postgresql
-postgresql-contrib
+homebrew
+django psycopg2
