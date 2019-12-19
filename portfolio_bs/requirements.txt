@@ -5,3 +5,12 @@ django-filter
 django-widget-tweaks
 djangorestframework_simplejwt
 django-generic-json-views
+tweepy
+python3
+gcloud
+googleapis-common-protos
+oauth2client
+requests
+requests-toolbelt
+rsa
+six
