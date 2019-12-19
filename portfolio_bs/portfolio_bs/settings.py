@@ -25,7 +25,7 @@ SECRET_KEY = 'd_)xd1=ia@1k&b1k07-^-g3iwv&a%95tpl%qi^^k4@+^42+smd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,3 +123,24 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+
+if 'DJANGO_DEVELOPMENT' in os.environ:
+    if os.environ['DJANGO_DEVELOPMENT'] == 'true':
+        from .dev import *
+    else:
+        from .prod import *
+else:
+    from .prod import *
+
+
+    #Rest framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+TOKEN_EXPIRED_AFTER_SECONDS=860000
