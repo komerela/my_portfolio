@@ -54,7 +54,7 @@ ROOT_URLCONF = 'portfolio_bs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/komerela/portfolio/portfolio_bs/portfolio_bs/templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,7 +127,7 @@ STATICFILES_DIRS = (
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-"""
+
 if 'DJANGO_DEVELOPMENT' in os.environ:
     if os.environ['DJANGO_DEVELOPMENT'] == 'true':
         from .dev import *
@@ -144,4 +144,3 @@ REST_FRAMEWORK = {
     )
 }
 TOKEN_EXPIRED_AFTER_SECONDS=860000
-"""
