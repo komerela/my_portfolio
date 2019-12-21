@@ -127,7 +127,7 @@ STATICFILES_DIRS = (
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-
+"""
 if 'DJANGO_DEVELOPMENT' in os.environ:
     if os.environ['DJANGO_DEVELOPMENT'] == 'true':
         from .dev import *
@@ -144,3 +144,4 @@ REST_FRAMEWORK = {
     )
 }
 TOKEN_EXPIRED_AFTER_SECONDS=860000
+"""
