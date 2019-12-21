@@ -5,6 +5,6 @@ DATABASES = {
         'USER': 'dotkoome',
         'PASSWORD': 'Mwongera81?',
         'HOST': '127.0.0.1',
-        'PORT': '5000',
+        'PORT': '5432',
     }
 }
