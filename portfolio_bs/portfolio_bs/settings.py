@@ -123,7 +123,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
+"""
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -144,3 +144,4 @@ REST_FRAMEWORK = {
     )
 }
 TOKEN_EXPIRED_AFTER_SECONDS=860000
+"""
