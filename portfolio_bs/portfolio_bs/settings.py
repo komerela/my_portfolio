@@ -54,7 +54,7 @@ ROOT_URLCONF = 'portfolio_bs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/koome/venv/portfolio/portfolio_bs/portfolio_bs/templates/port/'],
+        'DIRS': ['/home/koome/venv/portfolio/portfolio_bs/portfolio_bs/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
