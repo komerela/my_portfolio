@@ -22,6 +22,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', views.index, name='index'),
+    path('test',views.WelcomeView.as_view(),name='test'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

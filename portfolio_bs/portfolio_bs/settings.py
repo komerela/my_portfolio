@@ -51,10 +51,17 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'portfolio_bs.urls'
 
+'''
+    Using relative paths to declare resources is better than the implementation
+    you had used.
+    Where the project is running will resolve automatically
+    see how i implemented
+    'DIRS': [BASE_DIR + '/portfolio_bs/templates/',],
+'''
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/billionaire_mind/Users/komerela/portfolio/portfolio_bs/portfolio_bs/templates'],
+        'DIRS': [BASE_DIR + '/portfolio_bs/templates/',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
