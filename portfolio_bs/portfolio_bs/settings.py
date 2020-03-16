@@ -153,3 +153,10 @@ REST_FRAMEWORK = {
 }
 TOKEN_EXPIRED_AFTER_SECONDS=860000
 """
+EMAIL_BACKEND =
+  'django.core.mail.backends.console.EmailBackend'
+  DEFAULT_FROM_EMAIL = 'koome@neverest.co.ke'
+  EMAIL_HOST_USER = ''
+  EMAIL_HOST_PASSWORD = ''
+  EMAIL_USE_TLS = False
+  EMAIL_PORT = 1025
