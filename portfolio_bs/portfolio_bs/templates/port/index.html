@@ -142,7 +142,15 @@
 							<div class="col-md-offset-1 col-md-6">
 								<div class="hero-item">
 									<h5 class="mb-20">Software Engineer</h5>
-									<p class="mb-20"> Koome pronounced as Koh-may, is a Software Engineer living in San Francisco, Ca. In the last decade, his career has spanned several industries among them Communications, Retail and Software Engineering. He holds a Bsc. in International Business Administration (Finance) from USIU-A and is also a Certified Lean Six Sigma Black Belt (LSSBB) Professional and most recently has acquired knowledge and training as a Software Engineer. He has previously worked for Well Told Story leading development of products where he and his team won 2 International Emmy Awards. After moving to the USA, he worked for Amazon as a Fulfillment Center Trainer and later as a Process Assistant where he implemented an LSSBB project. He currently is a Co-founder of Neverest.co.ke, which seeks to provide solutions for Africa by Africa. He also volunteers for Code for San Francisco as a back-end engineer. </p>
+									<p class="mb-20"> Koome (Koh-may) Mwiti, is a Fullstack Software Engineer living in California. 
+										He has been managing projects in various fields among them Communications, 
+										Retail and Software Engineering. He is a Bsc. International Business Administration (Finance)
+										degree holder and is a Certified Lean Six Sigma Black Belt (LSSBB) Professional. He can be attributed 
+										with several notable achievements such as; implementing a black belt project for an Amazon 
+										facility, winning the 2012 International Emmy award for interweaving multi-media content & leading Neverest LLC 
+										in building Africa's first fully automated vehicle automation SAAS enterprise Software. He also 
+										volunteers for Code for San Francisco as a backend engineer.
+									</p>
 									<p class="mb-30">Hobbies and Interests: Running like a Kenyan, Soccer, Yoga, Hiking, Driving, Gaming.</p>
 
 									<button><span> <a href="https://drive.google.com/file/d/16xFt2moccu0PYGZUCfpnHURE5JjqWEz7/view?usp=sharing" target="_blank">  <i class="fa fa-download" aria-hidden="true"></i></span>  Resume</button> 
@@ -476,8 +484,10 @@
 						<div class="row">
 							<!-- contact form -->
 							<div class="col-md-offset-2 col-md-8">
-								 <form class="form" id="contact-form" method="post" action="contact.php" role="form">
-			                        <div class="messages"></div>
+								 <form class="form" id="contact-form" method="post">
+									{% csrf_token %}
+									{{ form.as_p }}
+									<div class="form-actions"></div>
 
 			                        <div class="controls">
 
@@ -512,7 +522,7 @@
 			                                    </div>
 			                                </div>
 			                                <div class="col-sm-4">
-			                                    <input type="submit" class="button" value="Send message">
+			                                    <button type="submit">Send message</button>
 			                                </div>
 			                            </div>
 			                        </div>

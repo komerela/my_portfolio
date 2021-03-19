@@ -1,5 +1,4 @@
 """portfolio_bs URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -15,14 +14,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls import url
 from . import views
+from .views import contactView, successView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', views.index, name='index'),
     path('test',views.WelcomeView.as_view(),name='test'),
+    # path('', include('PORTFOLIO.urls')),
+    path('contact/', contactView, name='contact'),
+    path('success/', successView, name='success'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -32,7 +32,7 @@ $(function (){
 
     // typejs
     $('.caption h4 span').typed({
-        strings: ["Software Engineer","Business Finance Graduate","Lean Six Sigma Black Belt Professional"],
+        strings: ["Product Manager"],
         loop: true,
         startDelay: 1000,
         backDelay: 2000

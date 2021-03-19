@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'portfolio_bs',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +60,8 @@ ROOT_URLCONF = 'portfolio_bs.urls'
     see how i implemented
     'DIRS': [BASE_DIR + '/portfolio_bs/templates/',],
 '''
-
+# Other way of writing that the DIRS
+# 'DIRS': [os.path.join(BASE_DIR, 'templates')],
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -81,13 +84,17 @@ WSGI_APPLICATION = 'portfolio_bs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portfolio',
+        'USER': 'km',
+        'PASSWORD': 'new_vip21',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -153,10 +160,12 @@ REST_FRAMEWORK = {
 }
 TOKEN_EXPIRED_AFTER_SECONDS=860000
 """
-EMAIL_BACKEND =
-  'django.core.mail.backends.console.EmailBackend'
-  DEFAULT_FROM_EMAIL = 'koome@neverest.co.ke'
-  EMAIL_HOST_USER = ''
-  EMAIL_HOST_PASSWORD = ''
-  EMAIL_USE_TLS = False
-  EMAIL_PORT = 1025
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'rmwiti@gmail.com'
+EMAIL_HOST_PASSWORD = 'mkyhywdxeylkrmbt'
+DEFAULT_FROM_EMAIL = 'default from email'
+
+
